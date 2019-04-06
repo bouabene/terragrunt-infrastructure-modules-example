@@ -55,7 +55,7 @@ resource "aws_launch_configuration" "webserver_example" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, TSL-DEMO" > index.html
+              echo "Hello" > index.html
               nohup busybox httpd -f -p "${var.server_port}" &
               EOF
 
